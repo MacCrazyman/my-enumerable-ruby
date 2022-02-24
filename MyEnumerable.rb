@@ -10,7 +10,10 @@ module MYENUMERABLE
     each{ |e| result = true if yield e}
     print result
   end
-end
 
-# [1, 2,3,4,5]
-# {|e|, e>5}
+  def filter(&block)
+    result = []
+    each{ |e| result << e if yield e}
+    print result
+  end
+end

@@ -9,12 +9,16 @@ class MyList
 
   def each
     @List.each do |item|
-      yield item   #{|item| item < 5}
+      yield item
     end
   end
 end
 
-# {|e| e < 5}
 new_list = MyList.new(6,2,3,4)
-# print new_list.all? {|e| e>5}
+
+new_list.all? {|e| e < 5}
+new_list.all? {|e| e > 5}
+new_list.any? {|e| e < 5}
 new_list.any? {|e| e > 5}
+new_list.filter {|e| e < 5}
+new_list.filter {|e| e > 5}
