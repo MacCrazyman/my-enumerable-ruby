@@ -12,16 +12,9 @@ class MyList
       yield item   #{|item| item < 5}
     end
   end
-  
-
-  # def all?
-  #   @List.each do |item|
-  #     puts yield item   #{|item| item < 5}
-  #   end
-  # end
 end
 
 # {|e| e < 5}
-new_list = MyList.new(1,2,3,4)
+new_list = MyList.new(6,2,3,4)
 # print new_list.all? {|e| e>5}
-new_list.hello
+new_list.all? {|e| e > 7}
