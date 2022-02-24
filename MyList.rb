@@ -17,4 +17,4 @@ end
 # {|e| e < 5}
 new_list = MyList.new(6,2,3,4)
 # print new_list.all? {|e| e>5}
-new_list.all? {|e| e > 7}
+new_list.any? {|e| e > 5}

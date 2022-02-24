@@ -5,5 +5,12 @@ module MYENUMERABLE
     print result
   end
 
-  
+  def any?(&block)
+    result = false
+    each{ |e| result = true if yield e}
+    print result
+  end
 end
+
+# [1, 2,3,4,5]
+# {|e|, e>5}
